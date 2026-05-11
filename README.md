@@ -7,55 +7,66 @@ This Privacy Policy describes how "FlipDrop" ("the App", "we", "our") collects, 
 ## Information We Collect
 
 ### Information You Provide
-The App does not require account creation, login, or any personal information to play. You do not enter a name, email, or any other identifying details.
+- **Player name (optional):** When your run earns a place in the local Hall of Fame, you may enter a display name. The name is stored only on your device and is shown next to your scores. You can change or skip it at any time from Settings.
 
 ### Information Collected Automatically
-The App itself does not collect, store, or transmit any personal information from your device. All gameplay data remains on your device.
+- **Device motion (accelerometer):** The App reads device orientation in real time to change the in-game gravity when you rotate your phone. This data is processed only on-device and is never stored or transmitted.
 
 ### Third-Party Services
 
 #### Google AdMob
-The App displays advertisements provided by Google AdMob (interstitial and rewarded ads). Google may collect and process certain information, including:
-- Advertising ID
+The App displays advertisements provided by Google AdMob (rewarded ads tied to power-ups and the "continue after game over" feature, plus an interstitial when a session ends). Google may collect and process certain information including:
+- Device identifiers (advertising ID)
 - IP address
 - General location (country/region level)
-- Device information (model, operating system, language)
-- App usage data related to ad delivery
+- App usage data
 
-For more information, see [Google's Privacy Policy](https://policies.google.com/privacy) and [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites).
+Users who purchase the "Remove Ads" in-app product no longer see ads after purchase.
+
+For more information, see [Google's Privacy Policy](https://policies.google.com/privacy).
+
+#### Google Play Billing
+The in-app purchase "Remove Ads" is processed by Google Play Billing. We do not collect or receive your payment details — Google Play handles the transaction and only reports the purchase status back to the App.
+
+For more information, see [Google Play Privacy Policy](https://play.google.com/about/play-terms/).
 
 ## Information We Do NOT Collect
 - We do not require account creation or login
-- We do not collect names, email addresses, or phone numbers
-- We do not collect precise location data
-- We do not access your camera, microphone, contacts, or photos
+- We do not collect email addresses, phone numbers, or real names
+- We do not collect location data
+- We do not access contacts, photos, microphone, or camera
+- We do not connect to any online multiplayer server
+- We do not use analytics, crash-reporting, or attribution SDKs
 - We do not track users across other apps or websites
 - We do not sell any user data to third parties
 
 ## Data Storage
-- **Game progress, Hall of Fame, and high scores:** Stored locally on your device only. We do not have access to this data.
-- **App preferences** (language, sound, settings): Stored locally on your device only.
-- **No cloud sync, no servers:** The App functions fully offline aside from loading advertisements.
+All gameplay data is stored **only on your device** via Android `SharedPreferences`. We do not have access to this data, and it is not synced or uploaded anywhere. Specifically:
+
+- Best score and Hall of Fame entries (score, timestamp, max combo, max value, session duration, optional player name)
+- Saved game-in-progress snapshot (so you can resume)
+- Selected language and sound on/off preference
+- "Remove ads" purchase status
+
+Uninstalling the App removes all of this local data.
 
 ## Permissions
+The App declares the following Android permissions:
 
-### Android
-- **INTERNET:** Required only to load advertisements from Google AdMob.
-- **AD_ID:** Used by Google AdMob to deliver advertisements. You can reset or limit this identifier in your device settings.
+- **`INTERNET`** — required by Google AdMob to fetch ads.
+- **`com.google.android.gms.permission.AD_ID`** — gives AdMob access to the Android advertising identifier (revocable from your device settings).
+- **`com.android.vending.BILLING`** — required to offer the "Remove Ads" in-app purchase via Google Play Billing.
 
-### iOS
-- **App Tracking Transparency:** On first launch, the App may request permission to use the device's advertising identifier for ad personalization. You can decline, and ads will still be shown (non-personalized).
+No other runtime permissions are requested.
 
 ## Children's Privacy
-The App is suitable for general audiences and does not knowingly collect personal information from children under 13. The App does not include social features, chat, or any way to share personal information.
-
-If you are a parent or guardian and believe your child has provided information through advertising identifiers, you can reset or disable the advertising ID in your device settings.
+The App is suitable for general audiences. We do not knowingly collect personal information from children under 13. The only optional piece of user-provided data is the Hall of Fame display name, which is stored locally on the device and is not transmitted.
 
 ## Your Rights
-- You can delete all local data (scores, preferences) by clearing the app data or uninstalling the App.
-- You can reset your advertising ID through your device settings (Android: Settings → Privacy → Ads; iOS: Settings → Privacy & Security → Tracking).
+- You can delete all local data (scores, preferences, saved game, player name, purchase status cache) by clearing the app's storage from Android Settings or by uninstalling the App. The "Reset Hall of Fame" button in Settings clears your local high scores immediately.
+- You can reset your advertising ID through your device settings.
 - You can opt out of personalized ads through your device settings.
-- EU/EEA users: Google AdMob handles consent for personalized advertising in compliance with GDPR through its in-app consent dialog where applicable.
+- You can change or remove your player name at any time from Settings.
 
 ## Changes to This Policy
 We may update this Privacy Policy from time to time. We will notify users of any material changes by updating the "Last updated" date at the top of this policy.
@@ -67,4 +78,4 @@ If you have questions about this Privacy Policy, please contact us at:
 
 ---
 
-This app is developed by Ganaj and is available on Google Play and the App Store.
+This app is developed by Ganaj and is available on Google Play.
